@@ -1,18 +1,21 @@
 ---
 // JAVASCRIPT
-// TODO: import hero-ice-cream.svg
-// TODO: import spoon-with-gradient.svg
+import heroSVG from '../../public/assets/hero-ice-cream.svg'
+import spoonSVG from '../../public/assets/spoon-with-gradient.svg'
 ---
 
 <!-- HTML -->
-<!-- TODO: header -->
-<!--   TODO: div -->
-<!--     TODO: span 'Welcome to the' -->
-<!--     TODO: span class 'ice-cream-span'-->
-<!--       TODO: span 'ICE CREAM' -->
-<!--       TODO: img class 'spoon-svg', src spoon-with-gradient, alt 'Spoon svg' -->
-<!--     TODO: span 'blog' -->
-<!--     TODO: img class 'hero-svg', src hero-ice-cream, alt 'Hero Ice Cream svg' -->
+<header>
+  <div>
+    <span>Welcome to the</span>
+    <span class="ice-cream-span">
+      <span>ICE CREAM</span>
+      <img src={spoonSVG} alt="Spoon svg" class="spoon-svg">
+    </span>
+    <span>blog</span>
+    <img src={heroSVG} alt="Hero Ice Cream svg">
+  </div>
+</header>
 
 <!-- CSS -->
 <style>

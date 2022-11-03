@@ -1,20 +1,25 @@
 ---
 // JAVASCRIPT
 // IF pages/index.astro ✔️
-// TODO: import Layout
+import Layout from "./Layout.astro";
 
-// TODO: destructure image, title, description, tags from props.content
+const { title, description, image, tags } = Astro.props.content
 ---
 
 <!-- HTML -->
-<!-- TODO: Layout, title title -->
-<!--   TODO: img class thumbnail, src image.src, alt image.alt -->
-<!--   TODO: div class 'post-container' -->
-<!--     TODO: slot -->
-<!--     TODO: ul class tags,  -->
-<!--       TODO: for each tag in tags -->
-<!--       - a with href `/tags/${tag}/` -->
-<!--         - li class tag, content {tag} -->
+<Layout title={title}>
+  <img src={image.src} alt={image.alt} class="thumbnail">
+  <div class="post-container">
+    <slot />
+    <ul class="tags">
+      {tags && tags.map(tag => (
+      <a href={`/tags/${tag}/`}>
+        <li class="tag">{tag}</li>
+      </a>
+      ))}
+    </ul>
+  </div>
+</Layout>
 
 <!-- CSS -->
 <style>

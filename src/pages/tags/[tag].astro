@@ -1,11 +1,18 @@
 ---
 // JAVASCRIPT
 // IF layouts/PostsLayout ✔️
-// TODO: import PostsLayout
+import PostsLayout from "../../layouts/PostsLayout.astro";
 
-// TODO: generate a dynamic path for all tags found in markdown posts
+export async function getStaticPaths() {
+  let posts = await Astro.glob('../post/*.md')
+  let tags = posts.map(post => post.frontmatter.tags.concat(post.frontmatter['hidden-tags'] || []))
+    .flat()
+    .filter((tag, i, arr) => arr.indexOf(tag) == i)
+  const staticPaths = tags.map(tag => ({ params: { tag } }))
+  return staticPaths
+}
 
-// TODO: get tag from params
+const tag = Astro.params.tag.toString()
 ---
 
-<!-- TODO: PostsLayout with title `${tag} + Recipes`, tag tag -->
+<PostsLayout title={`${tag[0].toUpperCase() + tag.slice(1)} + Recipes`} tag={tag} />

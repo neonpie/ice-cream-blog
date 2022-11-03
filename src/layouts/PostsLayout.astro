@@ -1,31 +1,37 @@
 ---
 // JAVASCRIPT
 // IF layouts/Layout.astro ✔️
-// TODO: import Layout from layouts
-// TODO: import Hero from components
-// TODO: import Card from components
+import Layout from "./Layout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
 
-// TODO: export interface Props with 
-// - required title: string
-// - optional hero: boolean
-// - optional tag: string
-// - optional 'hidden-tag': string
+export interface Props {
+  title: string;
+  hero?: boolean;
+  tag?: string;
+  'hidden-tag'?: string
+}
 
-// TODO: destructure Astro.props into title, hero, tag, ['hidden-tag']: hiddenTag
+const { title, hero, tag, ['hidden-tag']: hiddenTag } = Astro.props
 
-// TODO: load markdown files
+let posts = await Astro.glob('../pages/post/*.md')
 
 // IF pages/tags/[tag].astro ✔️
-// TODO: filter posts based on tag, hiddenTag props and post frontmatter
-// - only posts with url tag inside tags or hidden-tags remain
+// - such that only posts with tag, hiddenTag remain
 // - if no tag, hiddenTag -> show all posts
+posts = tag ? posts.filter(post => post.frontmatter.tags?.includes(tag) || post.frontmatter['hidden-tags']?.includes(tag)) : posts
 ---
 
 <!-- HTML -->
-<!-- TODO: Layout with title from props -->
-<!--   TODO: if hero prop true, then show Hero -->
-<!--   TODO: main -->
-<!--     TODO: map over posts, return Card with title, description, tags, url, image -->
+<Layout title={title}>
+  {hero &&
+  <Hero />}
+  <main>
+    {posts && posts.map(post =>
+    <Card title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags}
+      url={post.url} image={post.frontmatter.image} />)}
+  </main>
+</Layout>
 
 <!-- CSS -->
 <style>

@@ -1,17 +1,18 @@
 ---
 // JAVASCRIPT
-// TODO: import logo from public/assets
+import logoSVG from '../../public/assets/logo.svg'
 ---
 
 <!-- HTML -->
-<!-- TODO: nav -->
-<!--   TODO: a class logo, href to / -->
-<!--     TODO: img with src logo and alt "Ice Cream Blog logo" -->
-<!--   TODO: 4 links -->
-<!--     1. / Home -->
-<!--     2. /tags/nutty/ Nutty -->
-<!--     3. /tags/vegan/ Vegan -->
-<!--     4. /about/ About -->
+<nav>
+  <a href="/" class="logo">
+    <img src={logoSVG} alt="Logo">
+  </a>
+  <a href="/">Home</a>
+  <a href="/tags/nutty/">Nutty</a>
+  <a href="/tags/vegan/">Vegan</a>
+  <a href="/about/">About</a>
+</nav>
 
 <!-- CSS -->
 <style>

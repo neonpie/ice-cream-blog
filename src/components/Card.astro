@@ -1,22 +1,28 @@
 ---
 // JAVASCRIPT
-// TODO: export interface Props
-// - title: string
-// - description: string
-// - url: string
-// - image: { src: string, alt: string }
-// - tags: string[]
+export interface Props {
+	title: string;
+	description: string;
+	url: string;
+	image: {
+		src: string;
+		alt: string;
+	}
+	tags: string[];
+}
 
-// TODO: destructure props into title, description, url, image, tags
+const { title, description, url, image, tags } = Astro.props
 ---
 
 <!-- HTML -->
-<!-- TODO: a to url, class card -->
-<!--   TODO: img class thumbnail, src image.src, alt image.alt -->
-<!--   TODO: h3 class title, title -->
-<!--   TODO: p class description, description -->
-<!--   TODO: ul class tags -->
-<!--     TODO: if tags, return <li>tag</li> for every tag -->
+<a href={url} class="card">
+	<img src={image.src} alt={image.alt} class="thumbnail">
+	<h3 class="title">{title}</h3>
+	<p class="description">{description}</p>
+	<ul class="tags">
+		{tags && tags.map(tag => <li>{tag}</li>)}
+	</ul>
+</a>
 
 <!-- CSS -->
 <style>
