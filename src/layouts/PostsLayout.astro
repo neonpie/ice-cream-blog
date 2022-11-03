@@ -1,0 +1,50 @@
+---
+// JAVASCRIPT
+// IF layouts/Layout.astro ✔️
+// TODO: import Layout from layouts
+// TODO: import Hero from components
+// TODO: import Card from components
+
+// TODO: export interface Props with 
+// - required title: string
+// - optional hero: boolean
+// - optional tag: string
+// - optional 'hidden-tag': string
+
+// TODO: destructure Astro.props into title, hero, tag, ['hidden-tag']: hiddenTag
+
+// TODO: load markdown files
+
+// IF pages/tags/[tag].astro ✔️
+// TODO: filter posts based on tag, hiddenTag props and post frontmatter
+// - only posts with url tag inside tags or hidden-tags remain
+// - if no tag, hiddenTag -> show all posts
+---
+
+<!-- HTML -->
+<!-- TODO: Layout with title from props -->
+<!--   TODO: if hero prop true, then show Hero -->
+<!--   TODO: main -->
+<!--     TODO: map over posts, return Card with title, description, tags, url, image -->
+
+<!-- CSS -->
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  main {
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 5rem;
+    min-height: 65vh;
+    padding: 6.4rem;
+  }
+</style>

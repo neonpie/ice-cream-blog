@@ -1,0 +1,4 @@
+{
+  "recommendations": ["astro-build.astro-vscode", "fabiospampinato.vscode-todo-plus", "fabiospampinato.vscode-highlight"],
+  "unwantedRecommendations": []
+}

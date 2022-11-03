@@ -1,0 +1,20 @@
+# Todo List (Explorer difficulty)
+☐ [ ] /
+    - [ ] uses PostsLayout
+    - [ ] Navbar with links to
+        - [ ] / - Home
+        - [ ] /tags/vegan/ - Vegan
+        - [ ] /tags/nutty/ - Nutty
+        - [ ] /about/ - About
+    - [ ] Hero 'Welcome to the ICE CREAM Spoon svg blog Hero Ice Cream svg'    
+    - [ ] all posts shown as cards
+    - [ ] Footer with 'Made with 💗 by Neon Pie 🍨'
+- [ ] /tags/vegan/ and /tags/nutty/
+    - [ ] uses PostsLayout
+    - [ ] show all posts with corresponding tag
+- [ ] /about/
+    - [ ] uses Layout component
+    - [ ] content: About this blog. This blog is inspired by my love for Ice Cream 💓.
+- [ ] /post/<post>/
+    - [ ] uses PostLayout
+    - [ ] a single post

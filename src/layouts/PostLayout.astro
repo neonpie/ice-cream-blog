@@ -1,0 +1,64 @@
+---
+// JAVASCRIPT
+// IF pages/index.astro ✔️
+// TODO: import Layout
+
+// TODO: destructure image, title, description, tags from props.content
+---
+
+<!-- HTML -->
+<!-- TODO: Layout, title title -->
+<!--   TODO: img class thumbnail, src image.src, alt image.alt -->
+<!--   TODO: div class 'post-container' -->
+<!--     TODO: slot -->
+<!--     TODO: ul class tags,  -->
+<!--       TODO: for each tag in tags -->
+<!--       - a with href `/tags/${tag}/` -->
+<!--         - li class tag, content {tag} -->
+
+<!-- CSS -->
+<style>
+  .thumbnail {
+    object-fit: cover;
+    /* could be given as property in markdown file */
+    max-height: 60vh;
+    width: 100%;
+  }
+
+  .post-container {
+    width: 68%;
+    margin: auto;
+    max-width: 1680px;
+    margin-bottom: 5rem;
+    color: var(--dark-blue);
+  }
+
+  .post-container :global(p) {
+    font-size: 1.6rem;
+  }
+
+  .post-container .tags {
+    display: flex;
+    grid-gap: 2rem;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .post-container .tags a {
+    text-decoration: none;
+  }
+
+  .post-container .tags .tag {
+    list-style: none;
+    border: 1px solid var(--hot-pink);
+    border-radius: 10rem;
+    padding: 0.4rem 0.8rem;
+    color: var(--hot-pink);
+    cursor: pointer;
+  }
+
+  .post-container .tags .tag:hover {
+    background-color: var(--hot-pink);
+    color: white;
+  }
+</style>
