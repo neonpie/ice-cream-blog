@@ -1,7 +1,7 @@
 ---
 # https://minimalistbaker.com/vegan-chocolate-ice-cream/
 image:
-  src: ../../public/assets/vegan-chocolate-ice-cream.jpg
+  src: /assets/vegan-chocolate-ice-cream.jpg
   alt: Vegan Chocolate Ice Cream
 layout: ../../layouts/PostLayout.astro
 title: Vegan Chocolate Ice Cream

@@ -1,7 +1,7 @@
 ---
 # https://jessicainthekitchen.com/vegan-ice-cream-2/
 image:
-  src: ../../public/assets/vegan-ice-cream.webp
+  src: /assets/vegan-ice-cream.webp
   alt: Vegan Ice Cream
 layout: ../../layouts/PostLayout.astro
 title: Vegan Ice Cream (5 ingredients)
