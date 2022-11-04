@@ -1,3 +1,18 @@
+# Ice Cream Blog with AstroJS
+
+![image](https://user-images.githubusercontent.com/117347944/199939714-dd7506b7-ff18-45a8-b527-aa6945dcf7d9.png)
+
+- This project will guide you through (Guided & Relaxed difficulties):  
+	- the Astro project structure  
+	- creating your own .astro components  
+	- Astro pages and Layouts  
+	- using markdown posts  
+	- static and dynamic routing  
+
+
+---
+
+
 # Welcome to [Astro](https://astro.build)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
