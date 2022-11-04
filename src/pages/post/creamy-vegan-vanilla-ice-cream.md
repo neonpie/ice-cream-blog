@@ -1,7 +1,7 @@
 ---
 # https://minimalistbaker.com/creamy-vegan-vanilla-ice-cream/
 image:
-  src: ../../public/assets/creamy-vegan-vanilla-ice-cream.jpg
+  src: /assets/creamy-vegan-vanilla-ice-cream.jpg
   alt: Creamy Vegan Vanilla Ice Cream
 layout: ../../layouts/PostLayout.astro
 title: Creamy Vegan Vanilla Ice Cream
